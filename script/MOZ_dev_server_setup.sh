@@ -51,5 +51,3 @@ psql -Uopenerp openerp  < /opt/sesp_poc_repositories/sesp-bahmni-metadata/sql/er
 
 # Restart OpenMRS
 sudo service openmrs restart
-tart OpenMRS
-sudo service openmrs restart
