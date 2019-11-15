@@ -56,7 +56,7 @@ rm -rf pgbackrest/
 bahmni -i local backup --backup_type=db --options=postgres
 
 # compress postgres backup
-tar -zcvf -r pgbackrest-$day$month$year.tar.gz pgbackrest/
+tar -zcvf pgbackrest-$day$month$year.tar.gz pgbackrest/
 
 # move the compressed postgres backup folder to SESP-TR backup directory
 mv pgbackrest-$day$month$year.tar.gz $sesp_backup/$day$month$year
