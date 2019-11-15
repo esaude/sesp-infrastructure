@@ -52,10 +52,12 @@ sudo cp -R /var/lib/pgbackrest /opt/sesp-backup/$day$month$year/postgres_backup
 
 cd /opt/sesp-backup
 # compress postgres backup
-sudo zip  backup_$day$month$year  * 
+##sudo zip  backup_$day$month$year  * 
+sudo tar -zcvf backup_$day$month$year.tar.gz *
 
 #delete all only directories which are compressed 
-sudo rm -R `ls -1 -d */`
+ sudo rm -R `ls -1 -d */`
+
 
 #delete files more than 30 days
 find /opt/sesp-backup -type f -mtime +30 -exec rm -f {} \;
